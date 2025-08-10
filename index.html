@@ -3,16 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Korea King Linktree</title>
+    <title>👑 Weird Korea King Linktree 👑</title>
     <style>
-        :root {
-            --gold: #FFD700;
-            --red: #D7263D;
-            --blue: #1B3B6F;
-            --white: #fff;
-            --black: #222;
-            --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
-        }
         html, body {
             height: 100%;
             margin: 0;
@@ -20,41 +12,28 @@
         }
         body {
             min-height: 100vh;
-            background: linear-gradient(135deg, var(--gold) 0%, var(--red) 100%);
+            min-width: 100vw;
+            background: repeating-linear-gradient(135deg, #ffecb3 0 40px, #ffb3b3 40px 80px, #b3ffd9 80px 120px, #b3b3ff 120px 160px);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: 'Segoe UI', 'Pretendard', 'Noto Sans KR', sans-serif;
-            color: var(--black);
+            font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
             overflow: hidden;
         }
         .container {
-            background: rgba(255,255,255,0.95);
-            border-radius: 2rem;
-            box-shadow: var(--shadow);
-            padding: 2.5rem 2rem 2rem 2rem;
-            max-width: 350px;
-            width: 100%;
+            background: rgba(255,255,255,0.85);
+            border-radius: 48px 8px 48px 8px;
+            box-shadow: 0 0 40px 10px #ffb3b3, 0 0 0 8px #b3ffd9 inset;
+            padding: 2.5rem 2rem 2rem 2.5rem;
             display: flex;
             flex-direction: column;
             align-items: center;
             position: relative;
-            animation: royalEntrance 1.2s cubic-bezier(.68,-0.55,.27,1.55);
+            animation: wiggle 2.5s infinite alternate cubic-bezier(.68,-0.55,.27,1.55);
         }
-        @keyframes royalEntrance {
-            0% { transform: scale(0.7) rotate(-8deg); opacity: 0; }
-            70% { transform: scale(1.05) rotate(2deg); opacity: 1; }
-            100% { transform: scale(1) rotate(0); }
-        }
-        .crown {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
-            animation: crownBounce 1.5s infinite alternate cubic-bezier(.68,-0.55,.27,1.55);
-        }
-        @keyframes crownBounce {
-            0% { transform: translateY(0) rotate(-6deg); }
-            100% { transform: translateY(-10px) rotate(6deg); }
+        @keyframes wiggle {
+            0% { transform: rotate(-2deg) scale(1.01); }
+            100% { transform: rotate(2deg) scale(1.03); }
         }
         .profile {
             display: flex;
@@ -62,172 +41,178 @@
             align-items: center;
             margin-bottom: 2rem;
         }
-        .profile-img {
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--gold) 60%, var(--red) 100%);
-            border: 4px solid var(--blue);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
-            color: var(--white);
-            margin-bottom: 0.7rem;
-            box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.10);
-            position: relative;
-            overflow: hidden;
+        .king-emoji {
+            font-size: 4.5rem;
+            filter: drop-shadow(0 0 8px #ffb3b3);
+            animation: crown-bounce 1.2s infinite alternate cubic-bezier(.68,-0.55,.27,1.55);
+        }
+        @keyframes crown-bounce {
+            0% { transform: translateY(0) rotate(-8deg); }
+            100% { transform: translateY(-12px) rotate(8deg); }
         }
         .profile-name {
-            font-size: 1.5rem;
+            font-size: 2.2rem;
             font-weight: bold;
-            letter-spacing: 1px;
-            color: var(--blue);
+            color: #ff3e3e;
+            letter-spacing: 2px;
+            margin-top: 0.5rem;
             margin-bottom: 0.2rem;
+            text-shadow: 2px 2px 0 #fff176, 0 0 8px #b3b3ff;
+            position: relative;
         }
         .profile-desc {
-            font-size: 1rem;
-            color: var(--red);
-            margin-bottom: 0.2rem;
-            font-style: italic;
-        }
-        .funny-quote {
-            font-size: 0.95rem;
-            color: var(--gold);
-            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+            color: #6d4c41;
+            margin-bottom: 0.5rem;
             text-align: center;
-            font-weight: 500;
-            animation: funnyWiggle 2.5s infinite alternate;
-        }
-        @keyframes funnyWiggle {
-            0% { transform: rotate(-2deg) scale(1); }
-            100% { transform: rotate(2deg) scale(1.04); }
+            background: #fffde7;
+            border-radius: 12px;
+            padding: 0.3em 1em;
+            box-shadow: 0 2px 8px #ffecb3;
+            display: inline-block;
         }
         .links {
-            width: 100%;
             display: flex;
             flex-direction: column;
-            gap: 1.2rem;
+            gap: 1.5rem;
+            width: 100%;
+            align-items: center;
         }
         .link {
             display: flex;
             align-items: center;
-            gap: 1rem;
-            background: linear-gradient(90deg, var(--blue) 60%, var(--gold) 100%);
-            color: var(--white);
-            border-radius: 1.5rem;
-            padding: 1rem 1.2rem;
-            font-size: 1.1rem;
-            font-weight: 600;
+            justify-content: flex-start;
+            width: 260px;
+            background: linear-gradient(90deg, #ffb3b3 0%, #b3ffd9 100%);
+            border-radius: 32px 8px 32px 8px;
+            box-shadow: 0 4px 24px #b3b3ff99, 0 0 0 4px #fff176 inset;
+            padding: 1.1em 1.5em;
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #3e2723;
             text-decoration: none;
-            box-shadow: 0 2px 8px 0 rgba(31, 38, 135, 0.10);
-            transition: transform 0.18s cubic-bezier(.68,-0.55,.27,1.55), box-shadow 0.18s, background 0.18s;
             position: relative;
+            transition: transform 0.2s cubic-bezier(.68,-0.55,.27,1.55), box-shadow 0.2s, background 0.3s;
+            cursor: pointer;
             overflow: hidden;
         }
         .link:hover {
-            transform: scale(1.07) rotate(-2deg);
-            background: linear-gradient(90deg, var(--gold) 60%, var(--red) 100%);
-            box-shadow: 0 6px 18px 0 rgba(215, 38, 61, 0.18);
+            transform: scale(1.08) rotate(-2deg) skewY(2deg);
+            background: linear-gradient(90deg, #b3ffd9 0%, #ffb3b3 100%);
+            box-shadow: 0 8px 32px #ffb3b399, 0 0 0 8px #b3b3ff inset;
+            color: #ff3e3e;
         }
-        .link-icon {
+        .link .icon {
+            font-size: 2rem;
+            margin-right: 1.1em;
+            filter: drop-shadow(0 0 4px #fff176);
+            animation: icon-spin 2.5s infinite linear;
+        }
+        @keyframes icon-spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .link .weird-face {
             font-size: 1.5rem;
-            background: var(--white);
-            color: var(--blue);
-            border-radius: 50%;
-            width: 2.2rem;
-            height: 2.2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 2px 8px 0 rgba(31, 38, 135, 0.10);
-            transition: background 0.18s, color 0.18s;
+            margin-left: auto;
+            animation: face-blink 1.5s infinite alternate;
         }
-        .link:hover .link-icon {
-            background: var(--red);
-            color: var(--gold);
+        @keyframes face-blink {
+            0% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { opacity: 0.2; }
         }
-        /* Funny sparkle animation */
-        .sparkle {
+        /* Funny floating shapes */
+        .floating-shape {
             position: absolute;
-            top: 10px;
-            right: 20px;
-            font-size: 1.2rem;
-            color: var(--gold);
-            opacity: 0.7;
-            animation: sparkleMove 1.8s infinite linear;
+            border-radius: 50%;
+            opacity: 0.5;
+            z-index: 0;
+            pointer-events: none;
+            animation: floaty 7s infinite alternate ease-in-out;
         }
-        @keyframes sparkleMove {
-            0% { transform: scale(1) rotate(0deg); opacity: 0.7; }
-            50% { transform: scale(1.3) rotate(20deg); opacity: 1; }
-            100% { transform: scale(1) rotate(-10deg); opacity: 0.7; }
+        .floating-shape.one {
+            width: 70px; height: 70px;
+            background: #fff176;
+            top: -40px; left: -30px;
+            animation-delay: 0s;
+        }
+        .floating-shape.two {
+            width: 40px; height: 40px;
+            background: #b3b3ff;
+            bottom: -20px; right: -20px;
+            animation-delay: 2s;
+        }
+        .floating-shape.three {
+            width: 50px; height: 50px;
+            background: #ffb3b3;
+            top: 60%; left: -25px;
+            animation-delay: 1s;
+        }
+        @keyframes floaty {
+            0% { transform: translateY(0) scale(1) rotate(0deg); }
+            100% { transform: translateY(-30px) scale(1.2) rotate(30deg); }
         }
         /* Responsive */
         @media (max-width: 500px) {
             .container {
-                padding: 1.2rem 0.5rem 1.5rem 0.5rem;
-                max-width: 98vw;
-            }
-            .profile-img {
-                width: 70px;
-                height: 70px;
-                font-size: 1.7rem;
-            }
-            .profile-name {
-                font-size: 1.1rem;
+                padding: 1.2rem 0.5rem 1.2rem 0.8rem;
+                border-radius: 24px 8px 24px 8px;
             }
             .link {
-                font-size: 1rem;
-                padding: 0.8rem 0.7rem;
+                width: 90vw;
+                font-size: 1.1rem;
+                padding: 0.9em 1em;
+            }
+            .profile-name {
+                font-size: 1.3rem;
+            }
+            .king-emoji {
+                font-size: 2.5rem;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="crown" title="Korea King Style">👑</div>
+        <div class="floating-shape one"></div>
+        <div class="floating-shape two"></div>
+        <div class="floating-shape three"></div>
         <div class="profile">
-            <div class="profile-img" title="Royal Avatar">왕</div>
-            <div class="profile-name">Korea King</div>
-            <div class="profile-desc">Personal Linktree</div>
-        </div>
-        <div class="funny-quote">
-            "Even my code bows to the king! 👑💻"
+            <div class="king-emoji">👑</div>
+            <div class="profile-name">Korea King (but weird)</div>
+            <div class="profile-desc">Welcome to my royal (and weird) linktree! Bow before the king of code and chaos.</div>
         </div>
         <div class="links">
             <a class="link" href="https://github.com/TECHINNNNNNNN/manit" target="_blank" rel="noopener noreferrer">
-                <span class="link-icon">💻</span>
-                <span>GitHub: TECHINNNNNNNN/manit</span>
-                <span class="sparkle">✨</span>
+                <span class="icon">💻</span>
+                GitHub: TECHINNNNNNNN/manit
+                <span class="weird-face">( ͡° ͜ʖ ͡°)</span>
             </a>
         </div>
     </div>
     <script>
-        // Add a little confetti effect for fun
-        function createConfetti() {
-            const colors = ['#FFD700', '#D7263D', '#1B3B6F', '#fff', '#222'];
-            for(let i=0; i<18; i++) {
-                const conf = document.createElement('div');
-                conf.style.position = 'fixed';
-                conf.style.zIndex = 9999;
-                conf.style.width = conf.style.height = Math.random() > 0.5 ? '10px' : '7px';
-                conf.style.borderRadius = '50%';
-                conf.style.background = colors[Math.floor(Math.random()*colors.length)];
-                conf.style.top = '-20px';
-                conf.style.left = (Math.random()*100) + 'vw';
-                conf.style.opacity = 0.8;
-                conf.style.transition = 'top 2.2s cubic-bezier(.68,-0.55,.27,1.55), opacity 0.8s';
-                document.body.appendChild(conf);
-                setTimeout(() => {
-                    conf.style.top = (80 + Math.random()*10) + 'vh';
-                    conf.style.opacity = 0.1;
-                }, 80);
-                setTimeout(() => {
-                    conf.remove();
-                }, 2400);
-            }
-        }
-        setInterval(createConfetti, 3200);
+        // Randomly rotate the container for extra weirdness on load
+        document.querySelector('.container').style.transform = `rotate(${Math.random()*8-4}deg)`;
+        // Add a random floating emoji every few seconds
+        const emojis = ['🍕','🦄','🥒','🦑','🦖','🍄','👾','🐙','🥸','🤪','🦆','🍉','🧃','🦐','🦷','🧠'];
+        setInterval(()=>{
+            const e = document.createElement('div');
+            e.textContent = emojis[Math.floor(Math.random()*emojis.length)];
+            e.style.position = 'fixed';
+            e.style.left = Math.random()*100+'vw';
+            e.style.top = Math.random()*100+'vh';
+            e.style.fontSize = (Math.random()*2+1)+'rem';
+            e.style.opacity = 0.7;
+            e.style.pointerEvents = 'none';
+            e.style.transition = 'all 2.5s cubic-bezier(.68,-0.55,.27,1.55)';
+            document.body.appendChild(e);
+            setTimeout(()=>{
+                e.style.transform = `translateY(-${Math.random()*200+100}px) scale(${Math.random()*1.5+0.5}) rotate(${Math.random()*360}deg)`;
+                e.style.opacity = 0;
+            }, 100);
+            setTimeout(()=>{e.remove();}, 2600);
+        }, 1200);
     </script>
 </body>
 </html>
